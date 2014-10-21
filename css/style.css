@@ -1,0 +1,286 @@
+/*
+
+Main Colors:
+	dark grey	:	#545454		| dark blue	#002E40
+	grey			: #969696		| blue			#2A5769
+	white			: #FFFFFF		| white			#
+	blue			: #63ACDC		|	orange		#FABD4A
+		dark blue	: #1C425C	|	orange 2	#FA9600
+*/
+
+@font-face {
+font-family: 'Titillium Maps';
+src: url("../fonts/TitilliumMaps29L002.eot");
+src: local('Titillium Maps'), local('TitilliumMaps'),
+url("../fonts/TitilliumMaps29L002.otf") format("opentype"),
+url("../fonts/TitilliumMaps29L002.woff") format("woff");
+}
+
+
+*
+{
+margin: 0;
+padding: 0;
+}
+
+
+#all
+{
+margin: 0 auto;
+max-width:1050px;
+padding: 0px;
+text-align: left;
+}
+
+body{
+font-size: 100.01%;
+padding: 0px;
+text-align: left;
+position:relative;
+min-width: 500px;
+
+}
+
+h1{
+color:#FABD4A;
+text-align:left;
+font-family: 'Titillium Maps';
+text-align: center;
+font-size: 24pt;
+}
+
+h2 {
+color:#274B6D;
+text-align:left;
+font-family: 'Titillium Maps';
+text-align: center;
+font-size: 18pt;
+}
+
+h3 {
+color:#274B6D;
+text-align:left;
+font-family: 'Titillium Maps';
+text-align: center;
+font-size: 14pt;
+}
+
+
+p {
+font-family: 'Helvetica';
+font-size:20px;
+}
+
+a:link {color:#63ACDC;}      /* unvisited link */
+a:visited {color:#63ACDC;}  	/* visited link */
+a:hover {color:#1C425C;}  	/* mouse over link */
+a:active {color:#1C425C;}  	/* selected link */
+
+
+.selection select {
+border: 0 !important;  /*Removes border*/
+-webkit-appearance: none;  /*Removes default chrome and safari style*/
+-moz-appearance: none;  /*Removes default style Firefox*/
+}
+
+/************************* Wrapper **************************/
+#wrapper {
+border:solid 0px ;
+padding-top:0px;
+}
+/************************* Wrapper END**************************/
+
+/************************* Header **************************/
+#header {
+height: 100px;
+padding: 10px;
+background-color: #002E40;
+}
+
+#title {
+
+}
+
+#header h1 {
+margin: 15px;
+text-align: left;
+}
+
+#header p {
+text-align: center;
+}
+
+#logo {
+float: left;
+/*position: absolute;*/
+/*left: 38%;*/
+}
+#headertitle {
+float: left;
+/*position: absolute;*/
+/*left: 45%;*/
+}
+
+/************************* Wrapper END**************************/
+
+/************************* Content **************************/
+#content {
+min-height: 450px;
+position: relative;
+width: 100%;
+background: white;
+}
+
+#mainIndex {
+min-width: 510px;
+overflow: hidden;
+}
+
+#main {
+overflow: hidden;
+height: 500px;
+margin: 15px;
+padding: 15px;
+vertical-align: top;
+width: 770px;
+border: 1px solid #2A5769;
+border-top:1px solid #2A5769;
+float:right;
+}
+
+#sidebar {
+float: left;
+height: 500px;
+margin: 15px;
+padding: 15px;
+vertical-align: top;
+width: 170px;
+border: 1px solid #2A5769;
+border-top:1px solid #2A5769;
+}
+.inputtext{
+width:50%;
+padding:2px;
+outline:none;
+height:25px;
+}
+
+.selection{
+background-color:#EFF5FF;
+width:150px;
+border:solid #ccc;
+height:25px;
+display: inline-block;
+}
+.focusField{
+border:solid 2px #73A6FF;
+background:#EFF5FF;
+color:#000;
+}
+.idleField{
+background:#EEE;
+color: #6F6F6F;
+border: solid 2px #DFDFDF;
+height: 25px;
+}
+
+
+.hor-zebra {
+border-collapse: collapse;
+font-size: 12px;
+margin: 20px;
+text-align: left;
+width: 480px;
+}
+
+.hor-zebra .odd {
+background: none repeat scroll 0 0 #fabc4a;
+}
+
+img {
+margin: 2px;
+}
+
+.sidebarButton,
+.searchButton
+{
+-moz-border-radius:2px;
+-webkit-border-radius:2px;
+border-radius:15px;
+background:#2A5769;
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#badff3', EndColorStr='#7acbed')";
+border:1px solid #7db0cc !important;
+cursor: pointer;
+padding:11px 16px;
+width: 150px;
+font:bold 11px/14px Verdana, Tahomma, Geneva;
+text-shadow:rgba(0,0,0,0.2) 0 1px 0px; 
+-moz-box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
+-webkit-box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
+box-shadow:inset rgba(255,255,255,0.6) 0 1px 1px, rgba(0,0,0,0.1) 0 1px 1px;
+margin:5px;
+float:center;
+padding:7px 21px;
+}
+.sidebarButton,
+.searchButton{
+color:#FFFFFF;
+}
+
+.sidebarButton:hover,
+.searchButton:hover,
+.sidebarButton:focus,
+.searchButton:focus,
+.sidebarButton:active,
+.searchButton:active{
+background:#2675A6;
+-ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#7acbed', EndColorStr='#badff3')";
+}
+.sidebarButton:active,
+.searchButton:active
+{
+text-shadow:rgba(0,0,0,0.3) 0 -1px 0px; 
+}
+
+.sidebar input[type=text]
+{
+border:6px solid #F7F9FA;
+-webkit-border-radius:3px;
+-moz-border-radius:3px;
+border-radius:3px;
+-moz-box-shadow:2px 3px 3px rgba(0, 0, 0, 0.06) inset, 0 0 1px #95a2a7 inset;
+-webkit-box-shadow:2px 3px 3px rgba(0, 0, 0, 0.06) inset, 0 0 1px #95a2a7 inset;
+box-shadow:2px 3px 3px rgba(0, 0, 0, 0.06) inset, 0 0 1px #95a2a7 inset;
+margin:3px 0 4px;
+padding:8px 6px;
+width:160px;
+height:40px;
+display:block;
+float:left;
+}
+.sidebar input[type=text]:focus
+{
+border:6px solid #f0f7fc;
+-moz-box-shadow:2px 3px 3px rgba(0, 0, 0, 0.04) inset, 0 0 1px #0d6db6 inset;
+-webkit-box-shadow:2px 3px 3px rgba(0, 0, 0, 0.04) inset, 0 0 1px #0d6db6 inset;
+box-shadow:2px 3px 3px rgba(0, 0, 0, 0.04) inset, 0 0 1px #0d6db6 inset;
+color:#333;
+}
+
+/************************* Content END **************************/
+
+/************************* Footer **************************/
+#footer {
+min-height: 200px;
+background-color: #2A5769; 
+padding: 10px;
+clear:both;
+position: relative;
+}
+
+#footer p {
+color: #FABD4A;
+font-size: 14px;
+}
+
+/************************* Footer END **************************/
