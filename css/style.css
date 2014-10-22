@@ -1,11 +1,12 @@
 /*
-
+Theme: https://color.adobe.com/de/Teal-Orange-color-theme-2592429/
 Main Colors:
-	dark grey	:	#545454		| dark blue	#002E40
-	grey			: #969696		| blue			#2A5769
-	white			: #FFFFFF		| white			#
-	blue			: #63ACDC		|	orange		#FABD4A
-		dark blue	: #1C425C	|	orange 2	#FA9600
+dark blue			#002E40
+blue				#2A5769
+white				#FFFFFF
+orange				#FABD4A
+dark orange 		#FA9600
+button active blue	#2675A6
 */
 
 @font-face {

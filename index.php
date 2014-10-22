@@ -4,9 +4,10 @@
 
 <link type="image/ico" href="http://www.ti.bfh.ch/fileadmin/templates/img/favicon.ico?xyz=123456" rel="icon">
 
+<link href="css/reset.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="css/structure.css" rel="stylesheet" type="text/css">
-<link href="css/reset.css" rel="stylesheet" type="text/css">
+
 
 
 </head>
