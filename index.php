@@ -16,7 +16,8 @@
 	<!-- header -->
 	<div id="header">
 		<div id="logo"> 
-			<img class="headerlogo" src="img/bfh.png" name="bfh-logo" height="70px" />
+			<!-- Set the Bern University of Applied Sciences icon on top -->
+			<img class="headerlogo" src="img/bfh.png" name="bfh-logo" height="90px" />
 		</div>	
 		<div id="headertitle">
 		<h1>Tracker Login</h1>
@@ -28,6 +29,7 @@
 	
 		<div id="mainIndex">
 		
+				<!-- Box with 2 TextInputs and 2 Labels for Username and Password plus a Login Button. Action sent to login.php for credential validation-->
 				<form class="box login" action="login.php" method="POST">
 				<fieldset class="boxBody">
 				<label>Username</label>

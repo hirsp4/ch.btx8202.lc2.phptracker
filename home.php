@@ -10,16 +10,19 @@
 </head>
 <body>
 	<div id="wrapper">
+		<!-- header -->
 		<div id="header">
 			<div id="logo"> 
-				<img class="headerlogo" src="img/bfh.png" name="bfh-logo" height="70px" />
+				<!-- Set the Bern University of Applied Sciences icon on top -->
+				<img class="headerlogo" src="img/bfh.png" name="bfh-logo" height="90px" />
 			</div>	
 			<div id='headertitle'>
 				<h1>Medical Product Tracker</h1>
 			</div>	
 		</div>
-	
+		<!-- content -->
 		<div id="content">
+			<!-- sidebar with textinput to search for GTIN -->
 			<div id="sidebar">
 				<form class="sidebar">
 				<input type="text" style="float: center;" name="searchtext" id="searchtext" class="inputtext" placeholder="GTIN"><br>
