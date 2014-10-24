@@ -35,6 +35,7 @@
 	
 	
 			<div id="main">
+				<input type="submit" style="position: absolute;bottom: 0;right: 0;" class="refreshButton" value="Refresh">
 			</div>
 		</div>
 		<div id="footer">	

@@ -147,6 +147,7 @@ width: 770px;
 border: 1px solid #2A5769;
 border-top:1px solid #2A5769;
 float:right;
+position:relative;
 }
 
 #sidebar {
@@ -158,6 +159,7 @@ vertical-align: top;
 width: 170px;
 border: 1px solid #2A5769;
 border-top:1px solid #2A5769;
+position:relative;
 }
 .inputtext{
 width:50%;
@@ -203,7 +205,8 @@ margin: 2px;
 }
 
 .sidebarButton,
-.searchButton
+.searchButton,
+.refreshButton
 {
 -moz-border-radius:2px;
 -webkit-border-radius:2px;
@@ -224,21 +227,26 @@ float:center;
 padding:7px 21px;
 }
 .sidebarButton,
-.searchButton{
+.searchButton,
+.refreshButton{
 color:#FFFFFF;
 }
 
 .sidebarButton:hover,
 .searchButton:hover,
+.refreshButton:hover,
 .sidebarButton:focus,
 .searchButton:focus,
+.refreshButton:focus,
 .sidebarButton:active,
-.searchButton:active{
+.searchButton:active,
+.refreshButton:active{
 background:#2675A6;
 -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorStr='#7acbed', EndColorStr='#badff3')";
 }
 .sidebarButton:active,
-.searchButton:active
+.searchButton:active,
+.refreshButton:active
 {
 text-shadow:rgba(0,0,0,0.3) 0 -1px 0px; 
 }
