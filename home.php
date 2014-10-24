@@ -28,7 +28,9 @@
 				<input type="text" style="float: center;" name="searchtext" id="searchtext" class="inputtext" placeholder="GTIN"><br>
 				<input type="submit" class="searchButton" value="Search">
 				</form>
+				<form action="logout.php">
 				<input type="submit" style="position: absolute;bottom: 0;" class="sidebarButton" value="Logout">
+				</form>
 			</div>   
 	
 	
