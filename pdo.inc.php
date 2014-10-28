@@ -1,11 +1,11 @@
 <?php
-/*** mysql hostname
-$hostname = 'localhost';
 
-$username = '';
+$hostname = 'egServer70';
 
-$password = ''; 
+$username = 'SupplyChainServices';
 
-$dbname = '';
-***/
+$password = 'scslc214'; 
+
+$dbname = 'SupplyChainTracking';
+
 ?>

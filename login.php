@@ -15,40 +15,27 @@ $pwd= $_POST['password'];
 include('pdo.inc.php');
 
 try {
-    $dbh = new PDO("mysql:host=$hostname;dbname=$dbname", $username, $password);
+   //connection to the database
+   $dbhandle = mssql_connect($hostname, $username, $password)
+   or die("Couldn't connect to SQL Server on $hostname"); 
 
+   //select a database to work with
+   $selected = mssql_select_db($dbname, $dbhandle)
+   or die("Couldn't open database $dbname");  
+      
+   $query = mssql_query("SELECT * FROM users WHERE username='$user'");
 
-
-    /*** set the error reporting attribute ***/
-    $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    /*** prepare the SQL statement ***/
-    $stmt = $dbh->prepare("SELECT staff.* FROM staff, credential WHERE staff.staffID = credential.staffID AND credential.hashed_password LIKE sha(:password) AND staff.username=:username");
-
-    /*** bind the paramaters ***/
-    $stmt->bindParam(':password', $pwd, PDO::PARAM_STR,5);
-    $stmt->bindParam(':username', $user, PDO::PARAM_STR, 5);
-
-    /*** execute the prepared statement ***/
-    $stmt->execute();
-
-    /*** fetch the results ***/
-    $result = $stmt->fetchAll();
+    $result = mssql_fetch_array($query);
 
     /*** loop of the results ***/
     foreach($result as $row)
     {
-      $_SESSION['staffID']= $row['staffID'];
-      $_SESSION['name'] = $row['name'];
-      $_SESSION['first_name'] = $row['first_name'];
-
-      // redirect to the page home.php
+      if($row['password']=$pwd){
       header('location: home.php');
+      }
 
     }
-
-    /*** close the database connection ***/
-    $dbh = null;
+   mssql_close($dbhandle);
 
     }
 catch(PDOException $e)
