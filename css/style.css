@@ -161,6 +161,13 @@ border: 1px solid #2A5769;
 border-top:1px solid #2A5769;
 position:relative;
 }
+#searchbar {
+float: left;
+height: 230px;
+vertical-align: top;
+width: 170px;
+position:relative;
+}
 #radios {
 float:center;
 }

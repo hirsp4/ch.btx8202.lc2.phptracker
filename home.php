@@ -25,6 +25,7 @@
 		<div id="content">
 			<!-- sidebar with textinput to search for GTIN -->
 			<div id="sidebar">
+				<div id="searchbar">
 				<form class="sidebar">
 				<label>Search for:   </label>
 				<br><br>
@@ -35,6 +36,7 @@
 				<br><br>
 				<input type="text" style="float: center;" name="searchtext" id="ssccsearch" class="inputtext" placeholder="SSCC"><br>
 				<input type="text" style="float: center;display:none;" name="serialsearch" id="serialsearch" class="inputtext" placeholder="Serial"><br>
+				</div>
 				<input type="submit" class="searchButton" value="Search">
 				</form>
 				<form action="logout.php">
