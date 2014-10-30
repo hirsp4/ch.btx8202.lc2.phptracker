@@ -7,6 +7,7 @@
 
 <link type="image/ico" href="http://www.ti.bfh.ch/fileadmin/templates/img/favicon.ico?xyz=123456" rel="icon">
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/sidebar.js"></script>
 </head>
 <body>
 	<div id="wrapper">
@@ -25,7 +26,15 @@
 			<!-- sidebar with textinput to search for GTIN -->
 			<div id="sidebar">
 				<form class="sidebar">
-				<input type="text" style="float: center;" name="searchtext" id="searchtext" class="inputtext" placeholder="GTIN"><br>
+				<label>Search for:   </label>
+				<br><br>
+				<div id="radios">
+				<label>   </label><input type="radio" id="gtinradio" name="Code" value="GTIN" onClick="updateInput()"><label for="gtinradio">GTIN</label>
+				<input type="radio" id="ssccradio" name="Code" value="SSCC" id="sscc" onClick="updateInput()" checked><label for="sscc">SSCC</label>
+				</div>
+				<br><br>
+				<input type="text" style="float: center;" name="searchtext" id="ssccsearch" class="inputtext" placeholder="SSCC"><br>
+				<input type="text" style="float: center;display:none;" name="serialsearch" id="serialsearch" class="inputtext" placeholder="Serial"><br>
 				<input type="submit" class="searchButton" value="Search">
 				</form>
 				<form action="logout.php">

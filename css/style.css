@@ -161,6 +161,9 @@ border: 1px solid #2A5769;
 border-top:1px solid #2A5769;
 position:relative;
 }
+#radios {
+float:center;
+}
 .inputtext{
 width:50%;
 padding:2px;
@@ -274,6 +277,24 @@ border:6px solid #f0f7fc;
 -webkit-box-shadow:2px 3px 3px rgba(0, 0, 0, 0.04) inset, 0 0 1px #0d6db6 inset;
 box-shadow:2px 3px 3px rgba(0, 0, 0, 0.04) inset, 0 0 1px #0d6db6 inset;
 color:#333;
+}
+
+.sidebar input[type=radio]{
+border:6px solid #F7F9FA;
+	margin:3px 0 4px;
+	padding:8px 6px;
+	padding-right: 8px;
+	padding-left: 4px;
+}
+.sidebar input[type="radio"]:checked{
+    background-color:#002E40;
+}
+.sidebar label{
+	margin:3px 0 4px;
+	padding-left: 8px;
+	padding-right: 8px;
+	width: 25px;
+	font-size: 12pt;
 }
 
 /************************* Content END **************************/
