@@ -19,6 +19,9 @@
 			</div>	
 			<div id='headertitle'>
 				<h1>Medical Product Tracker</h1>
+			</div>
+			<div id="loggedIn">
+				<img class="headerlogo" src="img/user.png" style="vertical-align:middle;" name="user"/>  <label id="loginLabel">Logged in as: <?echo $_SESSION['username'];?></label>
 			</div>	
 		</div>
 		<!-- content -->

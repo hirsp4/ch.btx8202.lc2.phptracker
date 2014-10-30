@@ -121,6 +121,13 @@ float: left;
 /*position: absolute;*/
 /*left: 45%;*/
 }
+#loggedIn {
+float: right;
+}
+#loggedIn label{
+color: #FABD4A;
+font-size: 14px;	
+}
 
 /************************* Wrapper END**************************/
 

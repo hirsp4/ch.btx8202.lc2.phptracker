@@ -1,13 +1,13 @@
 <?php
   // For the testing of this database, the username and password are the same
   // They are the names of our staff members.
+session_start();
 
 if(!isset($_POST['username']) OR !isset($_POST['password'])){
   include('index.php');
   exit();
  }
 
-session_start();
 $user = $_POST['username'];
 $pwd= $_POST['password'];
 
@@ -31,6 +31,7 @@ try {
     foreach($result as $row)
     {
       if($row['password']=$pwd){
+      $_SESSION['username'] = $user;
       header('location: home.php');
       }
 
