@@ -49,6 +49,35 @@
 	
 	
 			<div id="main">
+				<table class="trackingtable">
+  <tr>
+    <td class="tg-031e">Timestamp</td>
+    <td class="tg-031e">GLN</td>
+    <td class="tg-031e">Scanning Location</td>
+    <td class="tg-031e">GTIN</td>
+    <td class="tg-031e">SSCC</td>
+    <td class="tg-031e">GLN destination</td>
+    <td class="tg-031e">Destination Name</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Mo, 03.11.2014 14:23:33</td>
+    <td class="tg-031e">2341341212</td>
+    <td class="tg-031e">Roche</td>
+    <td class="tg-031e">134120310231</td>
+    <td class="tg-031e">19312301203</td>
+    <td class="tg-031e">1023012319393</td>
+    <td class="tg-031e">Klinik Höheweg</td>
+  </tr>
+  <tr>
+    <td class="tg-031e">Di, 04.11.2014 07:28:55</td>
+    <td class="tg-031e">1023012319393</td>
+    <td class="tg-031e">Klinik Höheweg</td>
+    <td class="tg-031e">134120310231</td>
+    <td class="tg-031e">19312301203</td>
+    <td class="tg-031e">processed</td>
+    <td class="tg-031e"></td>
+  </tr>
+</table>
 				<input type="submit" style="position: absolute;bottom: 0;right: 0;" class="refreshButton" value="Refresh">
 			</div>
 		</div>
