@@ -34,12 +34,12 @@
 				<label>Search for:   </label>
 				<br><br>
 				<div id="radios">
-				<label>   </label><input type="radio" id="gtinradio" name="Code" value="GTIN" onClick="updateInput()"><label for="gtinradio">GTIN</label>
-				<input type="radio" id="ssccradio" name="Code" value="SSCC" id="sscc" onClick="updateInput()" checked><label for="sscc">SSCC</label>
+				<label>   </label><input type="radio" id="gtinradio" name="Code" value="GTIN" onClick="updateInput()" checked><label for="gtinradio">GTIN</label>
+				<input type="radio" id="ssccradio" name="Code" value="SSCC" id="sscc" onClick="updateInput()"><label for="sscc">SSCC</label>
 				</div>
 				<br><br>
-				<input type="text" style="float: center;" name="searchtext" id="ssccsearch" class="inputtext" placeholder="SSCC"><br>
-				<input type="text" style="float: center;display:none;" name="serialsearch" id="serialsearch" class="inputtext" placeholder="Serial"><br>
+				<input type="text" style="float: center;" name="searchtext" id="ssccsearch" class="inputtext" placeholder="GTIN"><br>
+				<input type="text" style="float: center;" name="serialsearch" id="serialsearch" class="inputtext" placeholder="Serial"><br>
 				</div>
 				</form>
 								<input type="submit" class="searchButton" value="Search" onclick="generateTable()">

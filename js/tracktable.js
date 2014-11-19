@@ -1,4 +1,7 @@
 var xmlHttp
+var gtin
+var serial
+var sscc
 
 function generateTable() {
 	xmlHttp=GetXmlHttpObject();
@@ -11,7 +14,19 @@ function generateTable() {
       document.getElementById("main").innerHTML=xmlHttp.responseText;
     }
   }
-  xmlHttp.open("GET","gettable.php",true);
+  gtin=document.getElementById("ssccsearch").value;
+  serial=document.getElementById("serialsearch").value;
+  sscc=gtin=document.getElementById("ssccsearch").value;
+  if(document.getElementById('gtinradio').checked) {
+  var url="gettableWithGTIN.php";
+  url=url+"?GTIN="+gtin;
+  url=url+"&Serial="+serial;
+}else if(document.getElementById('ssccradio').checked) {
+  var url="gettableWithSSCC.php";
+  url=url+"?SSCC="+sscc;
+}
+  
+  xmlHttp.open("GET",url,true);
   xmlHttp.send();
 }
 
@@ -36,4 +51,9 @@ catch (e)
     }
   }
 return xmlHttp;
+}
+
+function refreshTable(){
+	document.getElementById("main").innerHTML="";
+	generateTable();
 }
