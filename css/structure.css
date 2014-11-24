@@ -1,15 +1,13 @@
-/*
-✰✰✰✰✰✰✰✰✰✰✰✰✰✰ 
-
-Simple Login Form
-HTML5/CSS3 Coded by: $hekh@r d-Ziner, CSSJunction.com
-PSD by:PremiumPixels.com
-
-Uuage: Free. You can modify, remove our links and use wherever you want ☺.
-
-✰✰✰✰✰✰✰✰✰✰✰✰✰✰✰ 
-
-*/
+/* structure.css 
+ *
+ * Style File for Login Form
+ *
+ * @author Patrick Hirschi <patrick.hirschi@students.bfh.ch>
+ * @version 1.0
+ * @date 24-11-2014
+ *
+ * Copyright (c) 2014 Berner Fachhochschule. All rights reserved.
+ */
 body{
 background:#eff3f6;
 }
