@@ -13,7 +13,7 @@
  */
 
  // start the session
- session_start();
+ include('auth.php');
 ?>
 <html>
 <head>

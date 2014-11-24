@@ -43,14 +43,17 @@
    // fetch the results to an array
    $result = mssql_fetch_array($query);
 
-   // loop the results and validate the credentials. if successful: access to home.php
-   foreach($result as $row)
-   {
-      if($row['password']=$pwd){
+   // Check the credentials. if successful: access to home.php, if not: redirect to login form
+   $temp = (string)$result['password'];
+   $pwd = (string)$pwd;
+   if($temp==$pwd){
       $_SESSION['username'] = $user;
+      $_SESSION['loggedin'] = true;
       header('location: home.php');
-	  }
+   }else{
+	  header('location: index.php'); 
    }
+   
    // close the connection
    mssql_close($dbhandle);
  }catch(PDOException $e)
