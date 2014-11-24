@@ -1,15 +1,22 @@
+<?php
+/* index.php 
+ *
+ * This file generates the login form of the Medical Product Tracker.
+ *
+ * @author Patrick Hirschi <patrick.hirschi@students.bfh.ch>
+ * @version 1.0
+ * @date 24-11-2014
+ *
+ * Copyright (c) 2014 Berner Fachhochschule. All rights reserved.
+ */
+?>
 <html>
 <head>
 <title>BFH e-Health Login</title>
-
 <link type="image/ico" href="http://www.ti.bfh.ch/fileadmin/templates/img/favicon.ico?xyz=123456" rel="icon">
-
 <link href="css/reset.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 <link href="css/structure.css" rel="stylesheet" type="text/css">
-
-
-
 </head>
 <body>
 <div id="wrapper">
@@ -22,13 +29,10 @@
 		<div id="headertitle">
 		<h1>Tracker Login</h1>
 		</div>	
-	</div>
-	
+	</div>	
 	<!-- content -->
 	<div id="content">	
-	
 		<div id="mainIndex">
-		
 				<!-- Box with 2 TextInputs and 2 Labels for Username and Password plus a Login Button. Action sent to login.php for credential validation-->
 				<form class="box login" action="login.php" method="POST">
 				<fieldset class="boxBody">
@@ -40,19 +44,14 @@
 				<footer>
 				<input type="submit" class="btnLogin" value="Login" tabindex="4">
 				</footer>
-				</form>
-	    
+				</form>	    
 			</form>
-		</div>
-	
-	</div>
-	
-	<!-- footer -->
+		</div>	
+	</div>	
+	<!-- footer with authors and organization -->
 	<div id="footer">	
 		<p>&copy 2014 Bern University of Applied Sciences: J. Gn&aumlgi, P. Hirschi, P. Zehnder</p>
 	</div>
-	
 </div>
-
 </body>
 </html>
