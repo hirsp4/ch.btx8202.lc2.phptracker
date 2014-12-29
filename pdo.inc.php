@@ -16,6 +16,6 @@
 
  $password = 'scslc214'; 
 
- $dbname = 'SupplyChainTracking';
+ $dbname = 'SupplyChainLogistic';
 
 ?>

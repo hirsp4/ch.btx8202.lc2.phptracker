@@ -36,23 +36,23 @@ try {
    or die("Couldn't open database $dbname");
    //check if serial is set. if yes: integrate in SQL statement
    if($serial!==''){
-	   $query = mssql_query("SELECT GTIN, SerialNr, ExpiryDate, GLNscan,Name, Date, StateName
-	   FROM (SELECT GTIN, SerialNr, ExpiryDate, GLNscan, Date, Name as StateName 
+	   $query = mssql_query("SELECT GTIN, SerialNr, ExpiryDate, GLNscan,Name, ScanDate, StateName
+	   FROM (SELECT GTIN, SerialNr, ExpiryDate, GLNscan, ScanDate, Name as StateName 
 	   FROM TrackedItems INNER JOIN State on TrackedItems.StateNr=State.StateNr
 	   WHERE GTIN='".$gtin."' AND SerialNr='".$serial."') Track INNER JOIN Institution on Institution.GLNinst = Track.GLNscan
 	   UNION
-	   SELECT GTIN, SerialNr, ExpiryDate, GLNscan,Name, Date, StateName
-	   FROM (SELECT GTIN, SerialNr, ExpiryDate, GLNscan, Date, Name as StateName 
+	   SELECT GTIN, SerialNr, ExpiryDate, GLNscan,Name, ScanDate, StateName
+	   FROM (SELECT GTIN, SerialNr, ExpiryDate, GLNscan, ScanDate, Name as StateName 
 	   FROM TrackedItems INNER JOIN State on TrackedItems.StateNr=State.StateNr
 	   WHERE GTIN='".$gtin."' AND SerialNr='".$serial."') Track INNER JOIN Division on Division.GLNdiv=Track.GLNscan");
    }else{
-	   $query = mssql_query("SELECT GTIN, SerialNr, ExpiryDate, GLNscan,Name, Date, StateName
-	   FROM (SELECT GTIN, SerialNr, ExpiryDate, GLNscan, Date, Name as StateName 
+	   $query = mssql_query("SELECT GTIN, SerialNr, ExpiryDate, GLNscan,Name, ScanDate, StateName
+	   FROM (SELECT GTIN, SerialNr, ExpiryDate, GLNscan, ScanDate, Name as StateName 
 	   FROM TrackedItems INNER JOIN State on TrackedItems.StateNr=State.StateNr
 	   WHERE GTIN='".$gtin."') Track INNER JOIN Institution on Institution.GLNinst = Track.GLNscan
 	   UNION
-	   SELECT GTIN, SerialNr, ExpiryDate, GLNscan,Name, Date, StateName
-	   FROM (SELECT GTIN, SerialNr, ExpiryDate, GLNscan, Date, Name as StateName 
+	   SELECT GTIN, SerialNr, ExpiryDate, GLNscan,Name, ScanDate, StateName
+	   FROM (SELECT GTIN, SerialNr, ExpiryDate, GLNscan, ScanDate, Name as StateName 
 	   FROM TrackedItems INNER JOIN State on TrackedItems.StateNr=State.StateNr
 	   WHERE GTIN='".$gtin."') Track INNER JOIN Division on Division.GLNdiv=Track.GLNscan");
 	   }
