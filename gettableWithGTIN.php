@@ -64,7 +64,7 @@ try {
     <td class='tg-031e'>Expiry Date</td>
     <td class='tg-031e'>GLNscan</td>
     <td class='tg-031e'>Name</td>
-    <td class='tg-031e'>Date</td>
+    <td class='tg-031e'>Scan Date</td>
     <td class='tg-031e'>State</td>
 	</tr>";
 	// loop through results, fill the html table
