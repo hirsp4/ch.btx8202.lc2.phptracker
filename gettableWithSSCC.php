@@ -61,7 +61,7 @@ try {
    }
    echo "</table>";
    // generate the refresh Button bottom right of the website
-   echo "<input type='submit' style='position: absolute;bottom: 0;right: 0;' class='refreshButton' value='Refresh' onclick='refreshTable()'>";
+   echo "<input type='submit' style='position: relative;float:right' class='refreshButton' value='Refresh' onclick='refreshTable()'>";
    // close the connection for security reasons
    mssql_close($dbhandle);
 }catch(PDOException $e){

@@ -44,7 +44,7 @@ try {
 	   SELECT GTIN, SerialNr, ExpiryDate, GLNscan,Name, ScanDate, StateName
 	   FROM (SELECT GTIN, SerialNr, ExpiryDate, GLNscan, ScanDate, Name as StateName 
 	   FROM TrackedItems INNER JOIN State on TrackedItems.StateNr=State.StateNr
-	   WHERE GTIN='".$gtin."' AND SerialNr='".$serial."') Track INNER JOIN Division on Division.GLNdiv=Track.GLNscan");
+	   WHERE GTIN='".$gtin."' AND SerialNr='".$serial."') Track INNER JOIN Division on Division.GLNdiv=Track.GLNscan order by GTIN ASC, SerialNr ASC, ScanDate ASC");
    }else{
 	   $query = mssql_query("SELECT GTIN, SerialNr, ExpiryDate, GLNscan,Name, ScanDate, StateName
 	   FROM (SELECT GTIN, SerialNr, ExpiryDate, GLNscan, ScanDate, Name as StateName 
@@ -54,7 +54,7 @@ try {
 	   SELECT GTIN, SerialNr, ExpiryDate, GLNscan,Name, ScanDate, StateName
 	   FROM (SELECT GTIN, SerialNr, ExpiryDate, GLNscan, ScanDate, Name as StateName 
 	   FROM TrackedItems INNER JOIN State on TrackedItems.StateNr=State.StateNr
-	   WHERE GTIN='".$gtin."') Track INNER JOIN Division on Division.GLNdiv=Track.GLNscan");
+	   WHERE GTIN='".$gtin."') Track INNER JOIN Division on Division.GLNdiv=Track.GLNscan order by GTIN ASC, SerialNr ASC, ScanDate ASC");
 	   }
 
 	// build the html table header row, load style from style.css
@@ -85,7 +85,7 @@ try {
     }
     echo "</table>";
     // generate the refresh Button bottom right of the website
-    echo "<input type='submit' style='position: absolute;bottom: 0;right: 0;' class='refreshButton' value='Refresh' onclick='refreshTable()'>";
+    echo "<input type='submit' style='position: relative;float:right;' class='refreshButton' value='Refresh' onclick='refreshTable()'>";
     // close the connection for security reasons
 	mssql_close($dbhandle);
 }catch(PDOException $e){
